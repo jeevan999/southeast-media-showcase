@@ -36,19 +36,18 @@ export const Work = () => {
 
         <div className="space-y-32">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={index}
-              className={`flex flex-col ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } gap-12 items-center`}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } gap-12 items-center`}
             >
               {/* Image */}
               <div className="flex-1 group">
                 <div className="relative overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-500">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
-                    className="w-full h-auto transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
@@ -64,7 +63,7 @@ export const Work = () => {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {project.tags.map((tag, tagIndex) => (
-                    <span 
+                    <span
                       key={tagIndex}
                       className="px-4 py-2 rounded-full bg-muted/50 text-sm text-foreground/80 border border-border"
                     >

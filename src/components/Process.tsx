@@ -42,10 +42,6 @@ export const Process = () => {
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="bg-card/50 border border-border rounded-2xl p-8 text-center hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  {/* Step Number */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-vibrant flex items-center justify-center text-background font-bold text-sm">
-                    {index + 1}
-                  </div>
                   
                   {/* Icon */}
                   <div className="w-16 h-16 rounded-xl bg-muted/50 flex items-center justify-center mx-auto mb-6 mt-4">

@@ -53,10 +53,10 @@ export const Navbar = () => {
           <div className="text-2xl font-bold bg-gradient-vibrant bg-clip-text text-transparent">
             southeastmedia
           </div>
-          
+
           <div className="hidden md:flex items-center gap-8">
             {/* Services Mega Menu */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setActiveMenu("services")}
               onMouseLeave={() => setActiveMenu(null)}
@@ -65,9 +65,12 @@ export const Navbar = () => {
                 Services
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
+
               {activeMenu === "services" && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[600px] bg-card/95 backdrop-blur-xl border border-border rounded-2xl p-6 shadow-2xl animate-fade-in">
+                <div
+                  // 💡 FIX: Removed 'mt-2' which created a gap causing onMouseLeave to fire prematurely.
+                  className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-card/95 backdrop-blur-xl border border-border rounded-2xl p-6 shadow-2xl animate-fade-in"
+                >
                   <div className="grid grid-cols-2 gap-4">
                     {servicesMenu.map((item, index) => (
                       <a
@@ -76,9 +79,10 @@ export const Navbar = () => {
                         className="group flex gap-4 p-4 rounded-xl hover:bg-muted/50 transition-all duration-300"
                       >
                         <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
-                          <img 
-                            src={item.image} 
+                          <img
+                            src={item.image}
                             alt={item.title}
+                            // Ensure image covers the box
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                           />
                           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 group-hover:opacity-0 transition-opacity" />
@@ -102,7 +106,7 @@ export const Navbar = () => {
             </div>
 
             {/* Work Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setActiveMenu("work")}
               onMouseLeave={() => setActiveMenu(null)}
@@ -111,7 +115,7 @@ export const Navbar = () => {
                 Work
                 <ChevronDown className="w-4 h-4" />
               </button>
-              
+
               {activeMenu === "work" && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-card/95 backdrop-blur-xl border border-border rounded-2xl p-4 shadow-2xl animate-fade-in">
                   {workMenu.map((item, index) => (
@@ -135,7 +139,13 @@ export const Navbar = () => {
             <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">
               About
             </a>
-            
+            <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">
+              Careers
+            </a>
+            <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">
+              Portfolio
+            </a>
+
             <Button variant="default" className="bg-primary hover:bg-primary/90">
               Get in Touch
             </Button>
