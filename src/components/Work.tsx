@@ -71,9 +71,6 @@ export const Work = () => {
                     </span>
                   ))}
                 </div>
-                <button className="mt-4 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-[0_0_20px_hsl(280_85%_65%/0.4)] transition-all duration-300 hover:scale-105">
-                  View Case Study
-                </button>
               </div>
             </div>
           ))}

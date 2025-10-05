@@ -23,25 +23,10 @@ export const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="group px-8 py-4 bg-foreground text-background rounded-lg font-semibold hover:shadow-[0_0_30px_hsl(240_5%_96%/0.3)] transition-all duration-300 hover:scale-105 flex items-center gap-2">
-              Start Your Project
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            
             <button className="group px-8 py-4 bg-transparent border-2 border-foreground/30 text-foreground rounded-lg font-semibold hover:border-foreground hover:bg-foreground/10 transition-all duration-300 flex items-center gap-2">
               <Mail className="w-5 h-5" />
               Contact Us
             </button>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-foreground/20">
-            <p className="text-foreground/60 text-sm mb-4">Trusted by industry leaders worldwide</p>
-            <div className="flex flex-wrap justify-center gap-8 items-center opacity-50">
-              <div className="text-foreground/80 font-semibold">Brand A</div>
-              <div className="text-foreground/80 font-semibold">Brand B</div>
-              <div className="text-foreground/80 font-semibold">Brand C</div>
-              <div className="text-foreground/80 font-semibold">Brand D</div>
-            </div>
           </div>
         </div>
       </div>

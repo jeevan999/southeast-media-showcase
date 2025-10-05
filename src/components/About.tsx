@@ -29,36 +29,12 @@ export const About = () => {
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="text-center p-6 rounded-xl bg-background/50 border border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
+              className="text-center p-6 rounded-xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-vibrant flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-6 h-6 text-background" />
-              </div>
               <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">{stat.value}</div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
             </div>
           ))}
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-8 rounded-2xl bg-background/50 border border-border">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">Our Mission</h3>
-            <p className="text-muted-foreground">
-              To empower brands and creators with exceptional visual content that drives engagement and delivers results.
-            </p>
-          </div>
-          <div className="p-8 rounded-2xl bg-background/50 border border-border">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">Our Vision</h3>
-            <p className="text-muted-foreground">
-              To be the global leader in AI-enhanced media production, setting new standards for quality and innovation.
-            </p>
-          </div>
-          <div className="p-8 rounded-2xl bg-background/50 border border-border">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">Our Values</h3>
-            <p className="text-muted-foreground">
-              Creativity, excellence, collaboration, and continuous innovation in everything we create.
-            </p>
-          </div>
         </div>
       </div>
     </section>

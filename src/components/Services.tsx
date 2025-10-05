@@ -1,4 +1,5 @@
 import { Sparkles, Wand2, Brain } from "lucide-react";
+import Tdcarou from "./TDcarousel";
 
 const services = [
   {
@@ -28,6 +29,7 @@ export const Services = () => {
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
           We combine cutting-edge technology with artistic excellence to deliver exceptional media experiences
         </p>
+        <Tdcarou/>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
