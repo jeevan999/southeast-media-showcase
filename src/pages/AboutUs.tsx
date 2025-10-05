@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Users, Award, Globe, Zap } from "lucide-react";
+import aboutTeam from "@/assets/about-team.jpg";
+import aboutWorkspace from "@/assets/about-workspace.jpg";
 
 const AboutUs = () => {
   return (
@@ -18,6 +20,19 @@ const AboutUs = () => {
             the power of visual effects, and the intelligence of AI to create 
             extraordinary visual experiences.
           </p>
+        </div>
+      </section>
+
+      {/* Image Section */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={aboutTeam} 
+              alt="SoutheastMedia creative team collaborating"
+              className="w-full h-[500px] object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -83,6 +98,19 @@ const AboutUs = () => {
                 <p className="text-muted-foreground text-sm">{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workspace Image */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={aboutWorkspace} 
+              alt="Modern creative studio workspace"
+              className="w-full h-[500px] object-cover"
+            />
           </div>
         </div>
       </section>

@@ -2,6 +2,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Briefcase, ArrowRight } from "lucide-react";
+import careersTeam from "@/assets/careers-team.jpg";
+import careersWork from "@/assets/careers-work.jpg";
 
 const jobOpenings = [
   {
@@ -77,6 +79,19 @@ const Careers = () => {
         </div>
       </section>
 
+      {/* Team Image */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={careersTeam} 
+              alt="Creative team brainstorming together"
+              className="w-full h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Why Join Us */}
       <section className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
@@ -105,6 +120,19 @@ const Careers = () => {
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Work Environment Image */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src={careersWork} 
+              alt="Creative professional at work"
+              className="w-full h-[500px] object-cover"
+            />
           </div>
         </div>
       </section>
