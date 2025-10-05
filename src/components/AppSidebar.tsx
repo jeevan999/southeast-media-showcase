@@ -49,8 +49,8 @@ const workMenu = [
 ];
 
 const quickLinks = [
-  { title: "About", link: "#about", icon: Users },
-  { title: "Careers", link: "#about", icon: Briefcase },
+  { title: "About", link: "/about", icon: Users },
+  { title: "Careers", link: "/careers", icon: Briefcase },
   { title: "Portfolio", link: "#about", icon: FolderOpen }
 ];
 
