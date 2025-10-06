@@ -1,14 +1,14 @@
 import { TypingEffect } from "./TypingEffect";
 import heroBackground from "@/assets/hero-background.jpg";
-import animationImg from "@/assets/animation.png";
-import vfxImg from "@/assets/vfx.png";
-import workAiImg from "@/assets/work-ai.jpg";
+import heroAnimation from "@/assets/hero-animation.jpg";
+import heroVfx from "@/assets/hero-vfx.jpg";
+import heroAi from "@/assets/hero-ai.jpg";
 import { useEffect, useState } from "react";
 
 const images = [
-  { src: animationImg, label: "ANIMATION" },
-  { src: vfxImg, label: "VFX" },
-  { src: workAiImg, label: "AI" },
+  { src: heroAnimation, label: "ANIMATION" },
+  { src: heroVfx, label: "VFX" },
+  { src: heroAi, label: "AI" },
 ];
 
 export const CircularImageCarousel = () => {

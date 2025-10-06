@@ -1,8 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Users, Award, Globe, Zap } from "lucide-react";
-import aboutTeam from "@/assets/about-team.jpg";
-import aboutWorkspace from "@/assets/about-workspace.jpg";
+import aboutCollaboration from "@/assets/about-collaboration.jpg";
+import aboutStudio from "@/assets/about-studio.jpg";
 
 const AboutUs = () => {
   return (
@@ -28,7 +28,7 @@ const AboutUs = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src={aboutTeam} 
+              src={aboutCollaboration} 
               alt="SoutheastMedia creative team collaborating"
               className="w-full h-[500px] object-cover"
             />
@@ -107,7 +107,7 @@ const AboutUs = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src={aboutWorkspace} 
+              src={aboutStudio} 
               alt="Modern creative studio workspace"
               className="w-full h-[500px] object-cover"
             />

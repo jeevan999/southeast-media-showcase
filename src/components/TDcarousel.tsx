@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import workai from '@/assets/work-ai.jpg';
-import vfx from '@/assets/vfx.png';
-import animation from '@/assets/animation.png';
+import carouselAnimation from '@/assets/carousel-animation.jpg';
+import carouselVfx from '@/assets/carousel-vfx.jpg';
+import carouselAi from '@/assets/carousel-ai.jpg';
 
 // --- Static CSS styles converted to a JS object for a simplified setup ---
 const styles = {
@@ -100,9 +100,9 @@ const cardTransforms = {
 
 export const CardCarousel = () => {
   const cardData = [
-    { id: 1, content: "Animation", subtitle: "Breathe life into your ideas with stunning 2D and 3D animations that captivate and engage audiences.", image: animation },
-    { id: 2, content: "VFX", subtitle: "Transform reality with cutting-edge visual effects that blur the line between imagination and reality.", image: vfx },
-    { id: 3, content: "AI Integration", subtitle: "Harness the power of artificial intelligence to create smarter, faster, and more innovative content.", image: workai },
+    { id: 1, content: "Animation", subtitle: "Breathe life into your ideas with stunning 2D and 3D animations that captivate and engage audiences.", image: carouselAnimation },
+    { id: 2, content: "VFX", subtitle: "Transform reality with cutting-edge visual effects that blur the line between imagination and reality.", image: carouselVfx },
+    { id: 3, content: "AI Integration", subtitle: "Harness the power of artificial intelligence to create smarter, faster, and more innovative content.", image: carouselAi },
   ];
   const totalCards = cardData.length;
 

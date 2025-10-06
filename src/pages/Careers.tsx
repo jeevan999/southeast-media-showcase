@@ -2,8 +2,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Briefcase, ArrowRight } from "lucide-react";
-import careersTeam from "@/assets/careers-team.jpg";
-import careersWork from "@/assets/careers-work.jpg";
+import careersCelebrate from "@/assets/careers-celebrate.jpg";
+import careersFocused from "@/assets/careers-focused.jpg";
 
 const jobOpenings = [
   {
@@ -84,8 +84,8 @@ const Careers = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src={careersTeam} 
-              alt="Creative team brainstorming together"
+              src={careersCelebrate} 
+              alt="Creative team celebrating together"
               className="w-full h-[500px] object-cover"
             />
           </div>
@@ -129,8 +129,8 @@ const Careers = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src={careersWork} 
-              alt="Creative professional at work"
+              src={careersFocused} 
+              alt="Creative professional focused at work"
               className="w-full h-[500px] object-cover"
             />
           </div>
