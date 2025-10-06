@@ -98,46 +98,47 @@ export const Hero = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-overlay" />
       
-      {/* Animated Gradient Accents - Keeping these as part of the background effect */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse delay-1000" />
+      {/* Animated Gradient Accents */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-20 md:opacity-30">
+        <div className="absolute top-1/4 -left-1/4 w-64 md:w-96 h-64 md:h-96 bg-primary rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -right-1/4 w-64 md:w-96 h-64 md:h-96 bg-accent rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
-      {/* Content Container - Use a grid or flex for two columns */}
-      <div className="relative z-10 container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center min-h-screen pt-20 pb-12">
+      {/* Content Container */}
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center min-h-screen pt-24 sm:pt-20 pb-12">
 
-        {/* Right Column: Hero Text and Buttons */}
-        <div className="text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-in uppercase">
+        {/* Hero Text and Buttons */}
+        <div className="text-center md:text-left order-2 md:order-1">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 animate-fade-in uppercase">
             <span className="bg-gradient-vibrant bg-clip-text text-transparent">
               southeastmedia
             </span>
           </h1>
           
-          <div className="text-xl md:text-2xl lg:text-3xl font-light text-foreground/90 min-h-[120px] flex items-center md:justify-start justify-center animate-slide-up">
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-foreground/90 min-h-[80px] sm:min-h-[100px] md:min-h-[120px] flex items-center md:justify-start justify-center animate-slide-up">
             <TypingEffect texts={heroTexts} typingSpeed={60} deletingSpeed={40} pauseDuration={2500} />
           </div>
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 md:justify-start justify-center animate-fade-in-slow">
-            <button className="px-2 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-[0_0_30px_hsl(280_85%_65%/0.5)] transition-all duration-300 hover:scale-105">
+          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 md:justify-start justify-center animate-fade-in-slow">
+            <button className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-[0_0_30px_hsl(280_85%_65%/0.5)] transition-all duration-300 hover:scale-105 text-sm sm:text-base">
               View Our Work
             </button>
-            <button className="px-2 py-2 bg-transparent border-2 border-accent text-accent rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105">
+            <button className="px-6 sm:px-8 py-3 bg-transparent border-2 border-accent text-accent rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105 text-sm sm:text-base">
               Start a Project
             </button>
           </div>
         </div>
-           {/* Left Column: Circular Image Carousel */}
-        <div className="hidden md:flex justify-center items-center">
+        
+        {/* Image Carousel - Hidden on mobile */}
+        <div className="hidden md:flex justify-center items-center order-1 md:order-2">
           <CircularImageCarousel />
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-accent rounded-full animate-glow" />
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-foreground/30 rounded-full flex items-start justify-center p-1.5 sm:p-2">
+          <div className="w-1 h-2 sm:h-3 bg-accent rounded-full animate-glow" />
         </div>
       </div>
     </section>

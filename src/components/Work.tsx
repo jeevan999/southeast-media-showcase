@@ -25,47 +25,47 @@ const projects = [
 
 export const Work = () => {
   return (
-    <section id="work" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+    <section id="work" className="py-16 sm:py-20 md:py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 sm:mb-4 uppercase">
           Featured <span className="bg-gradient-vibrant bg-clip-text text-transparent">Work</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-20 max-w-2xl mx-auto">
+        <p className="text-center text-sm sm:text-base text-muted-foreground mb-12 sm:mb-16 md:mb-20 max-w-2xl mx-auto px-4">
           A showcase of our latest projects where creativity meets technology
         </p>
 
-        <div className="space-y-32">
+        <div className="space-y-16 sm:space-y-24 md:space-y-32">
           {projects.map((project, index) => (
             <div
               key={index}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } gap-12 items-center`}
+                } gap-6 sm:gap-8 md:gap-12 items-center`}
             >
               {/* Image */}
-              <div className="flex-1 group">
-                <div className="relative overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-500">
+              <div className="flex-1 w-full group">
+                <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-border hover:border-primary/50 transition-all duration-500">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-64 sm:h-80 md:h-96 object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               </div>
 
               {/* Content */}
-              <div className="flex-1 space-y-6">
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground">
+              <div className="flex-1 space-y-4 sm:space-y-6 px-2 sm:px-0">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
                   {project.title}
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-4 py-2 rounded-full bg-muted/50 text-sm text-foreground/80 border border-border"
+                      className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-muted/50 text-xs sm:text-sm text-foreground/80 border border-border"
                     >
                       {tag}
                     </span>
