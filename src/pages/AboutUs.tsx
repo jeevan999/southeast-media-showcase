@@ -12,7 +12,7 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-vibrant bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-vibrant bg-clip-text text-transparent uppercase">
             About SoutheastMedia
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -65,7 +65,7 @@ const AboutUs = () => {
       {/* Values */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-16">Our Core Values</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 uppercase">Our Core Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -139,7 +139,7 @@ const AboutUs = () => {
       {/* Story Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8 text-center">Our Story</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center uppercase">Our Story</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-muted-foreground leading-relaxed mb-6">
               Founded in 2010, SoutheastMedia began as a small animation studio 

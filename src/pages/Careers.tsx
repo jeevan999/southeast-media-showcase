@@ -69,7 +69,7 @@ const Careers = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-vibrant bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-vibrant bg-clip-text text-transparent uppercase">
             Join Our Creative Team
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -95,7 +95,7 @@ const Careers = () => {
       {/* Why Join Us */}
       <section className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Why SoutheastMedia?</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 uppercase">Why SoutheastMedia?</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
@@ -140,7 +140,7 @@ const Careers = () => {
       {/* Benefits */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Benefits & Perks</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 uppercase">Benefits & Perks</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div 
@@ -158,7 +158,7 @@ const Careers = () => {
       {/* Job Openings */}
       <section className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Open Positions</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 uppercase">Open Positions</h2>
           <div className="space-y-6">
             {jobOpenings.map((job, index) => (
               <div 
