@@ -31,7 +31,7 @@ export const Services = () => {
         </p>
         <Tdcarou/>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
@@ -44,7 +44,7 @@ export const Services = () => {
               <p className="text-muted-foreground">{service.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

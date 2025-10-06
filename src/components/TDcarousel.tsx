@@ -4,7 +4,6 @@ import vfx from '@/assets/vfx.png';
 import animation from '@/assets/animation.png';
 
 // --- Static CSS styles converted to a JS object for a simplified setup ---
-// NOTE: I've updated cardBase to remove the old linear-gradient background.
 const styles = {
   global: `
     body {
@@ -15,126 +14,128 @@ const styles = {
       margin: 0;
       background: #111;
       font-family: sans-serif;
+      overflow: hidden; 
     }
   `,
   carouselContainer: {
     textAlign: 'center',
+    width: '100%', 
   },
   carousel: {
     position: 'relative',
-    width: '600px',
-    height: '250px',
+    width: '90vw', 
+    // 🎨 INCREASED MAX WIDTH: Allows the carousel to take up more space on large monitors.
+    maxWidth: '1000px', 
+    height: '400px', // Adjusted height to accommodate taller cards and movement
     margin: 'auto',
     perspective: '1000px',
   },
   cardBase: {
     position: 'absolute',
-    top: '25px',
+    top: '50px', // Adjusted top position for centering within the increased carousel height
     left: '50%',
-    width: '300px',
-    height: '200px',
-    // Removed linear-gradient, will be added dynamically
+    // 🎨 INCREASED CARD SIZE
+    width: '350px', 
+    height: '280px', 
+    
     borderRadius: '15px',
     display: 'flex',
+    flexDirection: 'column' as 'column', 
     justifyContent: 'center',
     alignItems: 'center',
     color: 'white',
-    fontSize: '1.2rem',
-    fontWeight: 'bold',
     transition: 'all 0.5s ease',
     transformStyle: 'preserve-3d',
     boxShadow: '0 10px 20px rgba(0,0,0,0.3)',
-    // Added background properties for the image
-    backgroundSize: 'cover', // Sets the size to cover
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    textShadow: '0 0 5px rgba(0, 0, 0, 0.8)', // Ensures text is visible over the image
+    textShadow: '0 0 5px rgba(0,0,0,0.8)',
+    padding: '15px', // Slightly more padding
+    textAlign: 'center',
+  },
+  cardTitle: {
+    // 🎨 INCREASED FONT SIZE
+    fontSize: '2rem', 
+    fontWeight: 'bold',
+    margin: '10px 0 5px',
+  },
+  cardSubtitle: {
+    fontSize: '1rem', // Slightly increased subtitle size
+    opacity: 0.9,
+    margin: '5px 0',
   },
   controls: {
     marginTop: '20px',
   },
-  button: {
-    padding: '10px 20px',
-    margin: '0 10px',
-    border: 'none',
-    borderRadius: '8px',
-    background: '#2575fc',
-    color: 'white',
-    fontSize: '1rem',
-    cursor: 'pointer',
-    transition: 'background 0.3s',
-  }
 };
 
 // --- Transform definitions for clarity ---
+// NOTE: These percentages are relative to the *increased* card width (350px)
 const cardTransforms = {
   hidden: {
-    transform: 'translateX(-50%) scale(0.8)',
+    transform: 'translateX(-50%) scale(0.6)', 
     opacity: 0,
     zIndex: 0,
   },
   active: {
-    transform: 'translateX(-50%) scale(1.3) translateY(-20px)',
+    // Increased scale for a more pronounced center card
+    transform: 'translateX(-50%) scale(1.2) translateY(-15px)', 
     opacity: 1,
     zIndex: 3,
   },
   left: {
-    transform: 'translateX(-200%) rotateY(30deg) scale(0.9)',
+    // Increased shift to keep spacing clean on wider screens
+    transform: 'translateX(-180%) rotateY(20deg) scale(0.85)', 
     opacity: 0.7,
     zIndex: 2,
   },
   right: {
-    transform: 'translateX(100%) rotateY(-30deg) scale(0.9)',
+    // Increased shift to keep spacing clean on wider screens
+    transform: 'translateX(80%) rotateY(-20deg) scale(0.85)', 
     opacity: 0.7,
     zIndex: 2,
   },
 };
 
 export const CardCarousel = () => {
-  // 1. Updated cardData with image URLs
   const cardData = [
-    { id: 1, content: "Animation", image: animation },
-    { id: 2, content: "VFX", image: vfx },
-    { id: 3, content: "AI Integration", image: workai },
+    { id: 1, content: "Animation", subtitle: "Breathe life into your ideas with stunning 2D and 3D animations that captivate and engage audiences.", image: animation },
+    { id: 2, content: "VFX", subtitle: "Transform reality with cutting-edge visual effects that blur the line between imagination and reality.", image: vfx },
+    { id: 3, content: "AI Integration", subtitle: "Harness the power of artificial intelligence to create smarter, faster, and more innovative content.", image: workai },
   ];
   const totalCards = cardData.length;
 
-  // Initial state is 2, which is the 3rd card ("AI Integration")
   const [currentIndex, setCurrentIndex] = useState(2);
 
-  // 2. Updated getCardStyle to include the background image
-  const getCardStyle = (index:any) => {
+  const getCardStyle = (index: number): React.CSSProperties => {
     let transformKey = 'hidden';
 
     if (index === currentIndex) {
-      transformKey = 'active'; // Center
+      transformKey = 'active';
     } else if (index === (currentIndex - 1 + totalCards) % totalCards) {
-      transformKey = 'left'; // Immediate Left
+      transformKey = 'left';
     } else if (index === (currentIndex + 1) % totalCards) {
-      transformKey = 'right'; // Immediate Right
+      transformKey = 'right';
     }
 
-    // Get the image URL for the current card
     const imageUrl = cardData[index].image;
     
-    // Combine base styles, transform, and the new background image property
     return {
         ...styles.cardBase, 
         ...cardTransforms[transformKey],
-        backgroundImage: `url(${imageUrl})`, // Dynamic background image
-    } as React.CSSProperties; // Assert as CSSProperties for TypeScript
+        // Gradient overlay for better text contrast
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${imageUrl})`,
+    } as React.CSSProperties;
   };
 
-  // Handler for auto-play (Next)
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalCards);
   };
 
-  // Auto-play and global styles setup
   useEffect(() => {
     document.body.style.cssText = styles.global;
     
-    // Auto-play logic
     const intervalId = setInterval(() => {
       handleNext(); 
     }, 3000);
@@ -143,7 +144,6 @@ export const CardCarousel = () => {
       document.body.style.cssText = '';
       clearInterval(intervalId);
     };
-  // totalCards is constant, so dependency array is safe
   }, [totalCards]); 
 
 
@@ -153,12 +153,15 @@ export const CardCarousel = () => {
         {cardData.map((card, index) => (
           <div
             key={card.id}
-            // Use the updated getCardStyle
             style={getCardStyle(index)}
             className="card-item"
           >
-            {/* The content text remains visible */}
-            {card.content}
+            <p style={styles.cardTitle as React.CSSProperties}>
+                {card.content}
+            </p>
+            <p style={styles.cardSubtitle as React.CSSProperties}>
+                {card.subtitle}
+            </p>
           </div>
         ))}
       </div>
