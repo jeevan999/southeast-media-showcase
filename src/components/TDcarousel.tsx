@@ -23,24 +23,21 @@ const styles = {
   },
   carousel: {
     position: 'relative',
-    width: '90vw', 
-    // 🎨 INCREASED MAX WIDTH: Allows the carousel to take up more space on large monitors.
-    maxWidth: '1000px', 
-    height: '400px', // Adjusted height to accommodate taller cards and movement
+    width: '95vw',
+    maxWidth: '1000px',
+    height: '320px',
     margin: 'auto',
     perspective: '1000px',
   },
   cardBase: {
     position: 'absolute',
-    top: '50px', // Adjusted top position for centering within the increased carousel height
+    top: '20px',
     left: '50%',
-    // 🎨 INCREASED CARD SIZE
-    width: '350px', 
-    height: '280px', 
-    
+    width: '280px',
+    height: '240px',
     borderRadius: '15px',
     display: 'flex',
-    flexDirection: 'column' as 'column', 
+    flexDirection: 'column' as 'column',
     justifyContent: 'center',
     alignItems: 'center',
     color: 'white',
@@ -51,19 +48,19 @@ const styles = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     textShadow: '0 0 5px rgba(0,0,0,0.8)',
-    padding: '15px', // Slightly more padding
+    padding: '15px',
     textAlign: 'center',
   },
   cardTitle: {
-    // 🎨 INCREASED FONT SIZE
-    fontSize: '2rem', 
+    fontSize: '1.5rem',
     fontWeight: 'bold',
     margin: '10px 0 5px',
   },
   cardSubtitle: {
-    fontSize: '1rem', // Slightly increased subtitle size
+    fontSize: '0.85rem',
     opacity: 0.9,
     margin: '5px 0',
+    lineHeight: '1.3',
   },
   controls: {
     marginTop: '20px',
@@ -79,21 +76,18 @@ const cardTransforms = {
     zIndex: 0,
   },
   active: {
-    // Increased scale for a more pronounced center card
-    transform: 'translateX(-50%) scale(1.2) translateY(-15px)', 
+    transform: 'translateX(-50%) scale(1.1) translateY(-10px)',
     opacity: 1,
     zIndex: 3,
   },
   left: {
-    // Increased shift to keep spacing clean on wider screens
-    transform: 'translateX(-180%) rotateY(20deg) scale(0.85)', 
-    opacity: 0.7,
+    transform: 'translateX(-160%) rotateY(20deg) scale(0.8)',
+    opacity: 0.6,
     zIndex: 2,
   },
   right: {
-    // Increased shift to keep spacing clean on wider screens
-    transform: 'translateX(80%) rotateY(-20deg) scale(0.85)', 
-    opacity: 0.7,
+    transform: 'translateX(60%) rotateY(-20deg) scale(0.8)',
+    opacity: 0.6,
     zIndex: 2,
   },
 };

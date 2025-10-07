@@ -21,15 +21,17 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-16 sm:py-20 md:py-24 bg-card/50">
+    <section id="services" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-card/50">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 sm:mb-4 uppercase">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 sm:mb-4 uppercase">
           Our <span className="bg-gradient-vibrant bg-clip-text text-transparent">Services</span>
         </h2>
-        <p className="text-center text-sm sm:text-base text-muted-foreground mb-12 sm:mb-16 max-w-2xl mx-auto px-4">
+        <p className="text-center text-xs sm:text-sm md:text-base text-muted-foreground mb-8 sm:mb-12 md:mb-16 max-w-2xl mx-auto px-2 sm:px-4">
           We combine cutting-edge technology with artistic excellence to deliver exceptional media experiences
         </p>
-        <Tdcarou/>
+        <div className="overflow-hidden">
+          <Tdcarou/>
+        </div>
 
         {/* <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
