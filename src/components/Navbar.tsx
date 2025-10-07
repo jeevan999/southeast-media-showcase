@@ -6,7 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AppSidebar } from "@/components/AppSidebar";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo2.png";
 
 export const Navbar = () => {
   return (
