@@ -120,10 +120,15 @@ export const Hero = () => {
           </div>
 
           <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 md:justify-start justify-center animate-fade-in-slow">
-            <button className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-[0_0_30px_hsl(280_85%_65%/0.5)] transition-all duration-300 hover:scale-105 text-sm sm:text-base">
-              View Our Work
-            </button>
-            <button className="px-6 sm:px-8 py-3 bg-transparent border-2 border-accent text-accent rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-105 text-sm sm:text-base">
+            <button 
+              onClick={() => {
+                const email = "Kollirohit@gmail.com";
+                const subject = encodeURIComponent("New Project Inquiry");
+                const body = encodeURIComponent("Hello South East Media,\n\nI would like to start a project with you.");
+                window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+              }}
+              className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-[0_0_30px_hsl(280_85%_65%/0.5)] transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+            >
               Start a Project
             </button>
           </div>

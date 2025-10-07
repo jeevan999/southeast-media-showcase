@@ -23,9 +23,17 @@ export const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            <button className="group px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-foreground/30 text-foreground rounded-lg font-semibold hover:border-foreground hover:bg-foreground/10 transition-all duration-300 flex items-center gap-2 text-sm sm:text-base">
+            <button 
+              onClick={() => {
+                const email = "Kollirohit@gmail.com";
+                const subject = encodeURIComponent("New Project Inquiry");
+                const body = encodeURIComponent("Hello South East Media,\n\nI would like to start a project with you.");
+                window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+              }}
+              className="group px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-foreground/30 text-foreground rounded-lg font-semibold hover:border-foreground hover:bg-foreground/10 transition-all duration-300 flex items-center gap-2 text-sm sm:text-base"
+            >
               <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-              Contact Us
+              Start a Project
             </button>
           </div>
         </div>
