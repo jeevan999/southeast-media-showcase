@@ -2,8 +2,8 @@ import { Wand2, Sparkles, Brain, Play, Briefcase, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const quickLinks = [
-  { title: "About", link: "/about", icon: Users },
-  { title: "Careers", link: "/careers", icon: Briefcase },
+  { title: "About", link: "about", icon: Users },
+  { title: "Careers", link: "careers", icon: Briefcase },
 ];
 
 export const AppSidebar = () => {
