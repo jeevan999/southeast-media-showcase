@@ -95,7 +95,7 @@ const Careers = () => {
       {/* Why Join Us */}
       <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 uppercase">Why SoutheastMedia?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12 uppercase">Why South east Media?</h2>
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {[
               {

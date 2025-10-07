@@ -13,7 +13,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="text-xl sm:text-2xl font-bold bg-gradient-vibrant bg-clip-text text-transparent uppercase">
-            southeastmedia
+            south east media
           </div>
 
           <Sheet>

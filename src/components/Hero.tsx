@@ -111,7 +111,7 @@ export const Hero = () => {
         <div className="text-center md:text-left order-2 md:order-1">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 animate-fade-in uppercase">
             <span className="bg-gradient-vibrant bg-clip-text text-transparent">
-              southeastmedia
+              south east media
             </span>
           </h1>
           

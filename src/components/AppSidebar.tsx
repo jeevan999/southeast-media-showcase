@@ -59,7 +59,7 @@ export const AppSidebar = () => {
     <div className="flex flex-col h-full py-6">
       <div className="mb-8">
         <h2 className="text-2xl font-bold bg-gradient-vibrant bg-clip-text text-transparent mb-2">
-          southeastmedia
+          south east media
         </h2>
         <p className="text-sm text-muted-foreground">
           Crafting immersive visuals

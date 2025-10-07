@@ -13,7 +13,7 @@ const AboutUs = () => {
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-vibrant bg-clip-text text-transparent uppercase">
-            About SoutheastMedia
+            About South east Media
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-2">
             We're a cutting-edge media studio combining the art of animation, 
@@ -29,7 +29,7 @@ const AboutUs = () => {
           <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src={aboutCollaboration} 
-              alt="SoutheastMedia creative team collaborating"
+              alt="South east Media creative team collaborating"
               className="w-full h-64 sm:h-80 md:h-[500px] object-cover"
             />
           </div>
@@ -142,7 +142,7 @@ const AboutUs = () => {
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center uppercase">Our Story</h2>
           <div className="prose prose-sm sm:prose-base max-w-none">
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
-              Founded in 2010, SoutheastMedia began as a small animation studio 
+              Founded in 2010, South east Media began as a small animation studio 
               with a big dream: to create visual experiences that would leave 
               audiences breathless. What started with a team of five passionate 
               artists has grown into a powerhouse of over 50 creative professionals.
